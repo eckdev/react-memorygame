@@ -4,12 +4,17 @@ import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
 import { NavBar } from './navbar';
+import {GameContext,defaultState} from './GameContext.js';
+import { Test } from './Test';
 
 ReactDOM.render(
+  <GameContext.Provider value={defaultState}>
   <React.StrictMode>
     <NavBar />
-    <App />
-  </React.StrictMode>,
+    {/* <App /> */}
+    <Test />
+  </React.StrictMode>
+  </GameContext.Provider>,
   document.getElementById('root')
 );
 
